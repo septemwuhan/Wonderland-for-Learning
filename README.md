@@ -42,6 +42,6 @@
 ## 项目维护建议
 
 - 综合首页：维护根目录的 `index.html`。
-- 学科内容：分别维护 `chinese-2026/`、`math-2026/`、`english-2026/`、`history-2026/` 和 `spanish-2026/`。
+- 学科内容：分别维护 `chinese-2026/`、`math-2026/`、`english-2026/`、`history-2026/`。
 - 修改后检查 GitHub Actions 部署状态。
 - 新增学科时，建立独立目录，并在根目录首页添加对应入口。
