@@ -151,6 +151,39 @@ quiz2:[
 {q:"−2² 与 (−2)² 分别等于？",o:["−4，4","4，−4","−4，−4","4，4"],a:0,e:"先算乘方：−2²=−(2²)=−4；(−2)²=4。"},
 {q:"用科学记数法表示 560 000，应为？",o:["56×10⁴","5.6×10⁵","0.56×10⁶","5.6×10⁴"],a:1,e:"科学记数法中系数满足 1≤|a|＜10。"},
 {q:"计算 2+(−3)²×(−2)，结果是？",o:["−16","−14","16","−10"],a:0,e:"先乘方：9；再乘法：−18；最后 2−18=−16。"}
+,
+quiz3:[
+{q:"下列式子中，属于代数式的是？",o:["x+2","x=2","x>2","x∥y"],a:0,e:"用运算符号连接数或字母的式子叫代数式。"},
+{q:"a 与 b 的和的 2 倍表示为？",o:["2a+b","2(a+b)","a+2b","a+b×2"],a:1,e:"先求和，再乘 2。"},
+{q:"当 x=−2 时，3x+1 的值是？",o:["−5","5","−7","7"],a:0,e:"3×(−2)+1=−5。"},
+{q:"长方形长为 a、宽为 b，面积是？",o:["a+b","2a+2b","ab","2ab"],a:2,e:"长方形面积等于长乘宽。"},
+{q:"单价一定时，总价与数量是什么关系？",o:["正比例","反比例","无关","相等"],a:0,e:"总价=单价×数量，成正比例。"}
+],
+quiz4:[
+{q:"单项式 −3x²y 的次数是？",o:["2","3","4","−3"],a:1,e:"字母指数和为 2+1=3。"},
+{q:"多项式 2x²−3x+5 的次数是？",o:["1","2","3","5"],a:1,e:"多项式次数是最高次项的次数。"},
+{q:"下列各组是同类项的是？",o:["2x 与 2x²","3ab 与 −5ba","x² 与 y²","a 与 ab"],a:1,e:"字母相同且相同字母指数对应相同。"},
+{q:"合并 4a+3a−2a，结果是？",o:["9a","5a","5a²","a"],a:1,e:"系数相加：4+3−2=5。"},
+{q:"去括号：−(2x−3) 等于？",o:["−2x−3","2x−3","−2x+3","2x+3"],a:2,e:"括号前是负号，括号内各项都变号。"},
+{q:"(3x+2)+(x−5) 化简为？",o:["4x−3","2x+7","4x+7","2x−3"],a:0,e:"合并同类项得 4x−3。"}
+],
+quiz5:[
+{q:"下列哪个是一元一次方程？",o:["x²+1=0","2x+3=7","x+y=5","1/x=2"],a:1,e:"只含一个未知数，次数为 1，且两边为整式。"},
+{q:"方程 x+5=9 的解是？",o:["4","5","14","−4"],a:0,e:"x=9−5=4。"},
+{q:"解方程 3x=12，x 等于？",o:["3","4","9","36"],a:1,e:"两边除以 3，得 x=4。"},
+{q:"解方程 2(x−1)=6，x 等于？",o:["2","3","4","5"],a:2,e:"2x−2=6，2x=8，x=4。"},
+{q:"某数 x 的 3 倍比 5 多 7，正确方程是？",o:["3x+5=7","3x−5=7","5x−3=7","3(x+5)=7"],a:1,e:"“3 倍比 5 多 7”即 3x−5=7。"},
+{q:"解方程时，移项需要？",o:["改变符号","保持符号不变","平方","取绝对值"],a:0,e:"移项到等号另一边时要变号。"}
+],
+quiz6:[
+{q:"下列属于立体图形的是？",o:["三角形","圆","圆柱","角"],a:2,e:"圆柱属于立体图形。"},
+{q:"经过两点可以画几条直线？",o:["0 条","1 条","2 条","无数条"],a:1,e:"两点确定一条直线。"},
+{q:"两点之间最短的是？",o:["弧线","折线","线段","射线"],a:2,e:"两点之间，线段最短。"},
+{q:"若 M 是 AB 中点，AB=12 cm，则 AM=？",o:["4 cm","6 cm","12 cm","24 cm"],a:1,e:"中点把线段分成相等两段。"},
+{q:"一个平角等于多少度？",o:["90°","180°","270°","360°"],a:1,e:"平角为 180°。"},
+{q:"2°30′ 等于多少分？",o:["120′","130′","150′","230′"],a:2,e:"2°=120′，再加 30′，共 150′。"},
+{q:"若两个角互为补角，其中一个角为 65°，另一个角为？",o:["25°","65°","115°","125°"],a:2,e:"180°−65°=115°。"}
+]
 ]};
 function renderQuiz(id,data){const root=document.getElementById(id);root.innerHTML='<h3>随堂自测</h3><p style="color:#65748a;font-size:14px">选择答案后点击“提交答案”，系统即时判分并显示解析。</p>'+data.map((q,i)=>'<div class="q" data-q="'+i+'"><p>'+(i+1)+'. '+q.q+'</p><div class="options">'+q.o.map((o,j)=>'<label><input type="radio" name="'+id+'-'+i+'" value="'+j+'"><span>'+String.fromCharCode(65+j)+'. '+o+'</span></label>').join('')+'</div><div class="feedback" aria-live="polite"></div></div>').join('')+'<button class="action" type="button">提交答案</button> <button class="action secondary" type="button">重新作答</button><div class="result" aria-live="polite"></div>';
 const buttons=root.querySelectorAll('button');buttons[0].addEventListener('click',()=>{let score=0;data.forEach((q,i)=>{const picked=root.querySelector('input[name="'+id+'-'+i+'"]:checked');const fb=root.querySelector('[data-q="'+i+'"] .feedback');if(picked&&Number(picked.value)===q.a){score++;fb.className='feedback good';fb.textContent='回答正确。'+q.e}else{fb.className='feedback bad';fb.textContent='回答错误。正确答案：'+String.fromCharCode(65+q.a)+'。'+q.e}});root.querySelector('.result').textContent='本次得分：'+score+' / '+data.length+'（'+Math.round(score/data.length*100)+' 分）';});buttons[1].addEventListener('click',()=>{root.querySelectorAll('input').forEach(x=>x.checked=false);root.querySelectorAll('.feedback').forEach(x=>x.textContent='');root.querySelector('.result').textContent='';});}
