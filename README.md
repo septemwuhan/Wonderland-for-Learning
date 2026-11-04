@@ -10,7 +10,6 @@
 | 数学 Math | `math-2026/` | 已建立入口，内容建设中（当前为占位页） |
 | 英语 English | `english-2026/` | 已有 U1—U8 学习内容、词汇、语法、阅读与练习 |
 | 历史 History | `history-2026/` | 已建立入口，内容建设中（当前为占位页） |
-| 西班牙语 Spanish | `spanish-2026/` | 保留原西班牙语词汇学习应用 |
 
 各学科页面相互独立。新增或调整某一学科时，应优先在对应目录内修改，避免影响其他学科。
 
@@ -21,7 +20,6 @@
 - 数学：https://septemwuhan.github.io/Wonderland-for-Learning/math-2026/
 - 英语：https://septemwuhan.github.io/Wonderland-for-Learning/english-2026/
 - 历史：https://septemwuhan.github.io/Wonderland-for-Learning/history-2026/
-- 西班牙语：https://septemwuhan.github.io/Wonderland-for-Learning/spanish-2026/
 
 ## 本地预览
 
