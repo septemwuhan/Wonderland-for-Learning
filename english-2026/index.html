@@ -48,14 +48,14 @@ iframe{width:100%;height:900px;border:0;display:block;background:transparent;ove
 </div>
 <script>
 const units=[
- ["Friendship","友谊主题：描述朋友、品质与真正的友谊"],
- ["School life","校园生活：课程、日常安排与学习习惯"],
- ["The seasons","四季主题：季节变化、天气与自然"],
- ["The Earth","地球主题：环境保护与生态行动"],
- ["Off to space","太空探索：行星、航天与科学发现"],
- ["Travelling around Asia","亚洲旅行：文化遗产、地图与旅行规划"],
- ["Fun after school","课后活动：校园社团、运动与兴趣"],
- ["Collecting as a hobby","收藏爱好：藏品、分类与博物馆"]
+ ["Friendship","友谊主题：描述朋友、品质与真正的友谊","What makes a strong friendship?"],
+ ["School life","校园生活：课程、日常安排与学习习惯","What is your school life like?"],
+ ["The seasons","四季主题：季节变化、天气与自然","What do you know about the seasons?"],
+ ["The Earth","地球主题：环境保护与生态行动","Why should we learn about the Earth?"],
+ ["Off to space","太空探索：行星、航天与科学发现","What is it like to travel in space?"],
+ ["Travelling around Asia","亚洲旅行：文化遗产、地图与旅行规划","How do we introduce a city or town?"],
+ ["Fun after school","课后活动：校园社团、运动与兴趣","How do you make after-school activities fun and educational?"],
+ ["Collecting as a hobby","收藏爱好：藏品、分类与博物馆","Why do people collect things?"]
 ];
 const frame=document.getElementById("study");
 const title=document.getElementById("currentTitle");
@@ -64,7 +64,7 @@ let active=1;
 function selectUnit(n,updateHash=true){
  active=n;
  document.querySelectorAll(".unit").forEach((b,i)=>b.classList.toggle("active",i+1===n));
- title.textContent="Unit "+n+" · "+units[n-1][0];
+ title.textContent=units[n-1][2];
  desc.textContent=units[n-1][1];
  const target=n===1?"unit1.html":"course.html#u"+n;
  if(!frame.src.endsWith(target)) frame.src=target;
