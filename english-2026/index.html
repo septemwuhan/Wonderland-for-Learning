@@ -76,32 +76,41 @@ function unifyFrame(){
  try{
   const doc=frame.contentDocument;
   if(!doc||!doc.head||!doc.body)return;
+  const isU1=!!doc.getElementById("mainNav");
+  const isCourse=!!doc.getElementById("lesson");
   let style=doc.getElementById("unified-theme");
-  if(!style){
-   style=doc.createElement("style");style.id="unified-theme";
-   style.textContent=`
-    html,body{background:#f4f7fb!important;color:#26344b!important;font-family:system-ui,-apple-system,"Segoe UI",sans-serif!important}
-    body{margin:0!important}
-    .wrap{max-width:100%!important;margin:0 auto!important;padding:0 2px 24px!important}
-    .top,.hero,.units#unitNav,.units:not(#unitNav){ }
-    body:has(.top) .top,body:has(#lesson) .hero,body:has(#lesson) #unitNav{display:none!important}
-    .panel,.card,.hero,.unit,.tile,.wordcard,.vocab{background:#fff!important;border-color:#dce5f0!important;border-radius:15px!important;box-shadow:none!important}
-    .nav,.tabs,.subnav{border-color:#dce5f0!important}
-    button{font-family:inherit!important}
-    h1,h2,h3{color:#26344b!important}
-    .footer{display:none!important}
-    @media(max-width:600px){.wrap{padding:0 0 18px!important}}
-   `;
-   doc.head.appendChild(style);
-  }
-  const resize=()=>{const h=Math.max(doc.body.scrollHeight,doc.documentElement.scrollHeight);frame.style.height=(h+16)+"px";};
+  if(!style){style=doc.createElement("style");style.id="unified-theme";doc.head.appendChild(style);}
+  style.textContent=`
+   :root{--bg:#f4f7fb!important;--paper:#fff!important;--ink:#26344b!important;--muted:#66758c!important;--line:#dce5f0!important;--blue:#477bd1!important;--bluebg:#eaf1ff!important;--pale:#eaf1ff!important;--shadow:none!important}
+   html,body{background:#f4f7fb!important;color:#26344b!important;font-family:system-ui,-apple-system,"Segoe UI",sans-serif!important}
+   body{margin:0!important}
+   .wrap{max-width:100%!important;margin:0 auto!important;padding:0 2px 24px!important}
+   .top{display:none!important}
+   ${isCourse?".hero{display:none!important}":""}
+   ${isCourse?"#unitNav{display:none!important}":""}
+   .nav,.tabs,.subnav{display:flex!important;flex-wrap:wrap!important;gap:7px!important;margin:12px 0 18px!important;padding:0 0 10px!important;border-bottom:1px solid #dce5f0!important}
+   .nav button,.tabs button,.subnav button,.secondary{border:1px solid #dce5f0!important;background:#fff!important;color:#66758c!important;border-radius:10px!important;padding:9px 13px!important;font-size:12px!important;font-weight:700!important}
+   .nav button.active,.tabs button.active,.subnav button.active{background:#eaf1ff!important;border-color:#a9c3ec!important;color:#315fae!important}
+   .panel,.card,.unit,.hero,.tile,.vocab,.word{background:#fff!important;border:1px solid #dce5f0!important;border-radius:15px!important;box-shadow:none!important}
+   .panel,.card,.unit{padding:18px!important;margin:11px 0!important}
+   .grid{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))!important;gap:11px!important}
+   .tile{padding:16px!important;text-align:left!important;min-height:112px!important}
+   .tile:hover{transform:none!important}
+   h1,h2,h3{color:#26344b!important}
+   .section-head{margin:18px 0 12px!important}
+   .section-head h2,.unit h2{font-size:20px!important}
+   .notice{border-radius:12px!important}
+   .footer{display:none!important}
+   @media(max-width:600px){.wrap{padding:0 0 18px!important}.panel,.card,.unit{padding:14px!important}.nav,.tabs,.subnav{gap:6px!important}.nav button,.tabs button,.subnav button{padding:8px 10px!important;font-size:11px!important}}
+  `;
+  const resize=()=>{const h=Math.max(doc.body.scrollHeight,doc.documentElement.scrollHeight);frame.style.height=(h+20)+"px";};
   resize();
   if(!frame.dataset.resizeBound){
    const observer=new MutationObserver(resize);observer.observe(doc.body,{childList:true,subtree:true,attributes:true,characterData:true});
    frame.dataset.resizeBound="1";
-   doc.addEventListener("click",()=>setTimeout(resize,80),true);
+   doc.addEventListener("click",()=>setTimeout(resize,100),true);
   }
- }catch(e){frame.style.height="1000px";}
+ }catch(e){frame.style.height="1100px";}
 }
 frame.addEventListener("load",()=>{unifyFrame();setTimeout(unifyFrame,250);setTimeout(unifyFrame,900);});
 const match=location.hash.match(/u([1-8])/i);
