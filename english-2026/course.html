@@ -116,7 +116,7 @@ const a=rotate([meaning,...others.slice(0,3).map(x=>x[1].replace(/^(n\\.|v\\.|ad
 const gap=v[2].replace(new RegExp(v[0],'i'),'_____');
 const b=rotate([v[0],...others.slice(1,4).map(x=>x[0])],(i+1)%4);
 const c=rotate([v[3],...others.slice(4,7).map(x=>x[3])],(i+2)%4);
-return [['Which word means “'+meaning+'”?',a,i%4,v[0]+' 意为“'+meaning+'”。'],['Choose the word that completes: '+gap,b,(4-(i+1)%4)%4,v[0]+' 与句意和搭配相符：'+v[2]],['Which expression is correctly used with “'+v[0]+'”?',c,(4-(i+2)%4)%4,v[0]+' 的常见搭配是 '+v[3]+'。']];
+return [['Which word means “'+meaning+'”?',a,(4-i%4)%4,v[0]+' 意为“'+meaning+'”。'],['Choose the word that completes: '+gap,b,(4-(i+1)%4)%4,v[0]+' 与句意和搭配相符：'+v[2]],['Which expression is correctly used with “'+v[0]+'”?',c,(4-(i+2)%4)%4,v[0]+' 的常见搭配是 '+v[3]+'。']];
 });}
 units.forEach(u=>{u.vocab.push(...(vocabExpansion[u.id]||[]));const x=unitEnrichment[u.id];u.culture=x[0];u.cross=x[1];u.project=x[2];u.qs.push(...buildVocabQuestions(u));});
 const storeKey="oxford2026_u2u8_progress";
