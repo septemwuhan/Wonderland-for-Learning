@@ -111,8 +111,8 @@ const list=u.vocab.slice(0,20);
 const rotate=(a,n)=>a.map((_,k)=>a[(k+n)%a.length]);
 return list.flatMap((v,i)=>{
 const others=list.filter((x,j)=>j!==i);
-const meaning=v[1].replace(/^(n\\.|v\\.|adj\\.|adv\\.|prep\\.)\\s*/,'');
-const a=rotate([meaning,...others.slice(0,3).map(x=>x[1].replace(/^(n\\.|v\\.|adj\\.|adv\\.|prep\\.)\\s*/,''))],i%4);
+const meaning=v[1].replace("n. ","").replace("v. ","").replace("adj. ","").replace("adv. ","").replace("prep. ","");
+const a=rotate([meaning,...others.slice(0,3).map(x=>x[1].replace("n. ","").replace("v. ","").replace("adj. ","").replace("adv. ","").replace("prep. ",""))],i%4);
 const gap=v[2].replace(new RegExp(v[0],'i'),'_____');
 const b=rotate([v[0],...others.slice(1,4).map(x=>x[0])],(i+1)%4);
 const c=rotate([v[3],...others.slice(4,7).map(x=>x[3])],(i+2)%4);
