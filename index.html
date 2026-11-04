@@ -1,183 +1,45 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#17182f"><title>¡Misión vocabulario! · 西班牙语词汇冒险</title>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f4f7fc">
+<title>Wonderland · 综合学习平台</title>
 <style>
-:root{--bg:#17182f;--panel:#252744;--ink:#f5f2ff;--muted:#b8b5d2;--line:#444666;--pink:#ff78a8;--yellow:#ffd36e;--mint:#79e0c0;--blue:#8db8ff;--red:#ff8995}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#34305c,transparent 42%),radial-gradient(ellipse at 100% 35%,#253b59,transparent 35%),var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh}.wrap{max-width:1120px;margin:auto;padding:20px 18px 45px}button,input,select{font:inherit}button{cursor:pointer;color:inherit}button:focus-visible,input:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.brand{display:flex;align-items:center;gap:12px}.logo{width:46px;height:46px;border-radius:15px;background:linear-gradient(135deg,var(--pink),#a78bfa);display:grid;place-items:center;font-size:25px}.brand b{font-size:18px}.brand small{display:block;color:var(--muted);font-size:11px}.xp,.pill{border:1px solid var(--line);border-radius:99px;padding:8px 13px;font-size:12px}.xp b{color:var(--yellow)}.hero{display:grid;grid-template-columns:1.4fr .6fr;gap:15px}.hero-copy,.hero-art,.card,.module,.gamebox{border:1px solid var(--line);border-radius:22px;background:linear-gradient(140deg,#2b2c4d,#20223d)}.hero-copy{padding:25px}.eyebrow{color:var(--mint);font-size:11px;letter-spacing:2px;font-weight:900}.hero h1{font-size:clamp(29px,5vw,46px);line-height:1.08;margin:12px 0}.hero h1 span{color:var(--yellow)}.hero p{color:var(--muted);font-size:13px;line-height:1.7}.hero-art{display:grid;place-items:center;font-size:82px;background:linear-gradient(145deg,#ff83ad,#a78bfa 65%,#6aa8e9);position:relative;overflow:hidden}.hero-art:after{content:"";position:absolute;width:220px;height:220px;border:2px solid #ffffff55;border-radius:50%}.hero-art span{z-index:1}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:17px}.stat{padding:11px;border-radius:14px;background:#ffffff0b}.stat strong{display:block;font-size:21px;color:var(--yellow)}.stat small{color:var(--muted);font-size:10px}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.tab,.secondary{border:1px solid var(--line);background:#ffffff0b;color:var(--muted);padding:10px 14px;border-radius:12px;font-size:12px;font-weight:800}.tab.active{background:var(--pink);color:#27192f;border-color:var(--pink)}.view{display:none}.view.active{display:block}.head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:20px 0 13px}.head h2{font-size:20px;margin:0}.head p{font-size:12px;color:var(--muted);margin:5px 0 0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}.module{padding:17px;text-align:left;min-height:150px;transition:.15s}.module:hover{transform:translateY(-3px);border-color:var(--pink)}.module .emoji{font-size:27px}.module h3{font-size:15px;margin:10px 0 5px}.module p{font-size:11px;color:var(--muted);line-height:1.5;margin:0}.module small{display:block;color:var(--mint);margin-top:12px;font-size:10px}.toolbar{display:flex;gap:8px;margin:14px 0;flex-wrap:wrap}.search{flex:1;min-width:170px;background:#17192f;border:1px solid var(--line);border-radius:11px;padding:11px;color:var(--ink)}select{background:#292b4a;color:var(--ink);border:1px solid var(--line);border-radius:11px;padding:10px}.words{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.word{border:1px solid var(--line);border-radius:14px;background:#ffffff09;padding:13px;text-align:left;min-height:104px}.word b{font-size:15px}.word small{display:block;color:var(--mint);margin:6px 0;font-size:10px}.word span{color:var(--muted);font-size:11px}.detail{margin-top:12px;padding:19px;border:1px solid #67658e;border-radius:18px;background:#303253}.detail h3{margin:7px 0;font-size:25px}.detail p{font-size:13px;line-height:1.6}.label{font-size:10px;color:var(--yellow);font-weight:900;letter-spacing:1px}.example{background:#17192f88;padding:10px;border-radius:10px}.primary{border:0;border-radius:12px;background:linear-gradient(110deg,var(--pink),#b28aff);color:#281b36;font-weight:900;padding:12px 17px;box-shadow:0 4px 0 #854b94}.gamebox{padding:clamp(16px,3vw,28px);max-width:850px;margin:0 auto}.meta{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px;margin-bottom:14px}.bar{height:8px;background:#ffffff18;border-radius:99px;overflow:hidden;margin-bottom:20px}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--mint),var(--blue));width:0}.prompt{text-align:center;padding:12px 0 20px}.prompt small{color:var(--mint);font-weight:900;letter-spacing:1px}.prompt h2{font-size:clamp(23px,4vw,32px);margin:12px 0}.prompt p{color:var(--muted);font-size:13px;line-height:1.6}.options{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.option{background:#ffffff09;border:1px solid var(--line);border-radius:13px;padding:14px;text-align:left;font-size:13px;line-height:1.45;min-height:55px}.option.correct{border-color:var(--mint);background:#79e0c01b}.option.wrong{border-color:var(--red);background:#ff89951b}.feedback{display:none;margin-top:14px;padding:13px;background:#17192f;border-radius:12px;color:var(--muted);font-size:13px;line-height:1.6}.feedback.show{display:block}.actions{display:flex;justify-content:space-between;align-items:center;margin-top:15px;gap:10px}.match{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.match button{border:1px solid var(--line);border-radius:12px;background:#ffffff09;padding:12px;min-height:64px;font-size:12px}.match button.sel{border-color:var(--yellow)}.match button.done{opacity:.35;border-color:var(--mint)}.result{text-align:center;padding:20px}.result .emoji{font-size:54px}.result h2{font-size:26px}.score{font-size:44px;color:var(--yellow);font-weight:900}.note{font-size:11px;color:var(--muted);line-height:1.6;margin-top:15px}.progresslist{display:grid;gap:13px}.prow{display:grid;grid-template-columns:145px 1fr 40px;gap:9px;align-items:center;font-size:12px}.track{height:8px;background:#ffffff19;border-radius:99px;overflow:hidden}.track i{display:block;height:100%;background:linear-gradient(90deg,var(--mint),var(--blue))}.footer{text-align:center;color:#8988aa;font-size:10px;margin-top:28px}
-@media(max-width:700px){.hero{grid-template-columns:1fr}.hero-art{min-height:115px;font-size:60px}.grid{grid-template-columns:repeat(2,1fr)}.words{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:450px){.wrap{padding:13px 11px}.brand b{font-size:15px}.xp{font-size:10px}.hero-copy{padding:19px}.grid{gap:8px}.module{padding:12px;min-height:145px}.module h3{font-size:13px}.words{gap:7px}.word{padding:10px}.word b{font-size:13px}.options{grid-template-columns:1fr}.prow{grid-template-columns:105px 1fr 32px}}
-
-/* Bright classroom-friendly theme */
-:root{--bg:#f5f7fb;--panel:#fff;--ink:#26324a;--muted:#5f6d83;--line:#d8e0ec;--pink:#ff8b9b;--yellow:#f4b942;--mint:#168b75;--blue:#4e86d8;--red:#d94b62}
-body{background:linear-gradient(135deg,#fdf5ed 0%,#edf5ff 52%,#f4f0ff 100%);color:var(--ink)}
-.hero-copy,.card,.module,.gamebox{background:#fff;border-color:#dce4ef;box-shadow:0 8px 24px #344b6810}
-.hero-copy{background:linear-gradient(135deg,#fff7f0,#eef5ff)}
-.hero-art{border-color:#fff;background:linear-gradient(145deg,#ffc1c9,#c8b9ff 65%,#a9d4f5)}
-.brand small,.hero p,.head p,.module p,.word span,.prompt p,.meta,.note{color:#5f6d83}
-.xp,.pill{border-color:#d8e0ec;color:#43516a;background:#fff}
-.stat{background:#ffffffb8}.stat strong,.hero h1 span{color:#cb7c20}
-.tab,.secondary{border-color:#d5dfed;background:#fff;color:#52617a}
-.tab.active{background:#ffd5dc;color:#54303a;border-color:#ffb8c4}
-.module:hover{border-color:#f08da0}
-.search,select{background:#fff;color:#26324a;border-color:#d5dfed}
-.word{background:#fff;border-color:#dce4ef;color:#26324a}
-.word small,.label{color:#168b75}
-.detail{background:#f0f5fc;border-color:#d3deed;color:#26324a}
-.example,.feedback{background:#fff;border:1px solid #e0e7f0;color:#52617a}
-.primary{background:linear-gradient(110deg,#ffb4bf,#cbbcff);color:#38283c;box-shadow:0 4px 0 #b38cae}
-.bar,.track{background:#e2e8f0}
-.option,.match button{background:#fff;border-color:#d8e0ec;color:#26324a}
-.option.correct{background:#e2f6ef;border-color:#54b99a}.option.wrong{background:#fff0f1;border-color:#e58a98}
-.blank{color:#c47b12;font-weight:900;background:#fff0cc;border-radius:5px;padding:1px 7px}
-.footer{color:#7c8798}
-#modal{background:#e9eff8ed!important}
-</style></head><body><div class="wrap">
-<header class="top"><div class="brand"><div class="logo">⚡</div><div><b>¡Misión vocabulario!</b><small>西班牙语词汇冒险 · Nivel B1–B2</small></div></div><div class="xp">⭐ <b id="xp">0</b> XP</div></header>
-<section class="hero"><div class="hero-copy"><div class="eyebrow">YOUR SPANISH QUEST STARTS HERE</div><h1>词汇不是背出来的，<br><span>是闯关练出来的。</span></h1><p>探索社区、解决生活难题、完成语言任务。通过词汇图鉴、语境挑战、配对和综合测试，逐步掌握本单元全部词汇。</p><div class="stats"><div class="stat"><strong id="total">0</strong><small>核心词汇</small></div><div class="stat"><strong id="known">0</strong><small>已掌握</small></div><div class="stat"><strong id="rounds">0</strong><small>完成挑战</small></div></div></div><div class="hero-art"><span>🗺️</span></div></section>
-<nav class="tabs"><button class="tab active" data-view="home">🏠 冒险大厅</button><button class="tab" data-view="words">📚 词汇图鉴</button><button class="tab" data-view="play">🎮 开始挑战</button><button class="tab" data-view="progress">🏆 我的进度</button></nav>
-<section class="view active" id="home"><div class="head"><div><h2>选择你的任务</h2><p>六大主题场景 · 在真实语境中掌握词汇</p></div><span class="pill">B1–B2</span></div><div class="grid" id="modules"></div><p class="note">建议先浏览主题词汇卡，再完成词义识别、语境填空和配对挑战。答错的词汇会自动进入复习清单。</p></section>
-<section class="view" id="words"><div class="head"><div><h2>📚 词汇图鉴</h2><p>西语释义 + 中文辅助 + 例句 + 常见搭配</p></div><span class="pill" id="count"></span></div><div class="toolbar"><input class="search" id="search" placeholder="搜索西语单词或中文释义…"><select id="filter"><option value="all">全部主题</option></select></div><div class="words" id="wordlist"></div><div id="detail"></div></section>
-<section class="view" id="play"><div class="head"><div><h2>🎮 选择挑战模式</h2><p>每轮约 5–8 分钟，答题后即时反馈。</p></div><span class="pill">XP REWARD</span></div><div class="grid"><button class="module" data-game="quiz"><div class="emoji">🧠</div><h3>Significado correcto</h3><p>根据西语单词选择正确中文释义。</p><small>词义识别 · 10题</small></button><button class="module" data-game="match"><div class="emoji">🧩</div><h3>Une las parejas</h3><p>将西班牙语词汇与中文释义配对。</p><small>快速配对 · 6组</small></button><button class="module" data-game="cloze"><div class="emoji">✍️</div><h3>Completa la frase</h3><p>根据句子语境选出最合适的词汇。</p><small>语境运用 · 10题</small></button><button class="module" data-game="review"><div class="emoji">🔁</div><h3>Repaso inteligente</h3><p>优先练习曾经答错或尚未掌握的词。</p><small>智能复习 · 10题</small></button><button class="module" data-game="mixed"><div class="emoji">🎲</div><h3>Desafío sorpresa</h3><p>随机混合词义和语境题，检验综合掌握。</p><small>综合挑战 · 10题</small></button></div></section>
-<section class="view" id="progress"><div class="head"><div><h2>🏆 我的学习进度</h2><p>记录保存在当前浏览器，无需注册。</p></div><button class="secondary" id="reset">重置记录</button></div><div class="stats"><div class="stat"><strong id="pxp">0</strong><small>累计 XP</small></div><div class="stat"><strong id="prounds">0</strong><small>完成轮次</small></div><div class="stat"><strong id="accuracy">—</strong><small>累计正确率</small></div></div><div class="card" style="padding:18px"><h3 style="margin-top:0">主题掌握情况</h3><div class="progresslist" id="groupProgress"></div></div><div class="card" style="padding:18px;margin-top:12px"><h3 style="margin-top:0">待复习词汇</h3><div id="reviewWords" class="note">完成挑战后显示。</div></div><p class="note">本版本使用 localStorage 保存个人学习记录。更换浏览器、设备或清理网站数据后，记录不会自动同步。</p></section>
-<div class="footer">¡Aprende jugando! · 西班牙语专业词汇互动学习 · GitHub Pages</div></div>
-<div id="modal" style="display:none;position:fixed;inset:0;background:#101123ed;z-index:10;overflow:auto;padding:18px 10px"><div class="gamebox" id="gamebox"></div></div>
-<script>
-(function(){
-const G=[["community","Una comunidad solidaria","互助社区","🤝","社区服务、志愿者与弱势群体"],["society","La sociedad y la población","社会与人口","🏙️","人口、社会状况与经济领域"],["care","Ayudar a los demás","帮助他人","💗","照护、援助与日常服务"],["home","La vida en casa","家庭与居住","🏡","公寓设施、家用设备与维修"],["daily","La vida cotidiana","日常生活","🧾","账单、消费与生活琐事"],["leisure","Ocio y comunicación","休闲与交流","📺","新闻、电视剧、音乐与人际互动"]];
-const raw=[
-"prestación|福利；补助；给付|Ayuda o servicio que se ofrece a alguien, especialmente desde una institución.|La asociación ofrece prestaciones sociales a las familias con pocos recursos.|community|sustantivo|prestaciones sociales",
-"equipo|团队；设备|Grupo de personas que trabajan juntas o conjunto de materiales necesarios.|Un equipo de voluntarios visita a las personas mayores del barrio.|community|sustantivo|equipo de voluntarios",
-"voluntario, ria|志愿的；志愿者|Persona que realiza una actividad por decisión propia y sin obligación.|Cada voluntario dedica dos tardes a la semana a ayudar a los vecinos.|community|adjetivo / sustantivo|trabajo voluntario",
-"habitante|居民；居住者|Persona que vive habitualmente en un lugar.|Este municipio tiene unos veinte mil habitantes.|society|sustantivo|habitantes de una ciudad",
-"cercanía|附近；亲近；接近|Cualidad de estar cerca en el espacio o de mantener una relación próxima.|La cercanía del centro facilita el acceso a los servicios.|society|sustantivo|en las cercanías de",
-"concentrar(se)|集中；聚集|Reunir o reunirse en un lugar o dirigir la atención hacia algo.|La población inmigrante se concentra en algunos barrios.|society|verbo|concentrarse en",
-"inmigrante|移民；移居者|Persona que llega a otro país o región para establecerse allí.|La asociación ofrece orientación a los inmigrantes recién llegados.|society|sustantivo / adjetivo|población inmigrante",
-"provincia|省；省份|División territorial y administrativa de algunos países.|El programa se desarrolla en varias provincias del sur.|society|sustantivo|en toda la provincia",
-"determinar|确定；决定；查明|Establecer o averiguar algo con precisión.|El estudio intenta determinar las necesidades de cada barrio.|society|verbo|determinar las causas",
-"poblador|居民；定居者；开拓者|Persona que habita o se establece en un territorio.|Los primeros pobladores de la zona vivían cerca del río.|society|sustantivo|primeros pobladores",
-"hallarse|处于；位于；发现自己|Encontrarse en un lugar o en una determinada situación.|Muchas familias se hallan en una situación económica difícil.|society|verbo pronominal|hallarse en una situación",
-"situación|情况；处境；形势|Estado o conjunto de circunstancias en que se encuentra alguien o algo.|La situación de los hogares vulnerables ha mejorado.|society|sustantivo|situación económica",
-"económico, ca|经济的；经济上的；便宜的|Relacionado con la economía o con el dinero.|La crisis económica afecta a los hogares con menos ingresos.|society|adjetivo|situación económica",
-"desfavorecido, da|处于不利地位的；弱势的|Que se encuentra en una situación social o económica de desventaja.|La asociación presta apoyo educativo a los niños desfavorecidos.|society|adjetivo|familias desfavorecidas",
-"afrontar|面对；应对|Hacer frente a una dificultad, un problema o una situación complicada.|Las familias necesitan recursos para afrontar los gastos básicos.|care|verbo|afrontar un problema",
-"ocupacional|职业的；就业相关的|Relacionado con el trabajo, la profesión o la ocupación.|El centro organiza talleres de orientación ocupacional.|society|adjetivo|orientación ocupacional",
-"educativo, va|教育的|Relacionado con la educación o la enseñanza.|El proyecto ofrece apoyo educativo a menores vulnerables.|society|adjetivo|apoyo educativo",
-"sector|领域；部门；行业；群体|Parte de una actividad económica o de un conjunto social.|El sector público colabora con varias asociaciones locales.|society|sustantivo|sector público",
-"población|人口；居民；人口群体|Conjunto de personas que viven en un territorio.|La población de esta provincia ha aumentado.|society|sustantivo|población local",
-"necesitado, da|有需要的；贫困的|Que carece de lo necesario para vivir o necesita ayuda.|La campaña recoge alimentos para las personas necesitadas.|community|adjetivo / sustantivo|personas necesitadas",
-"asistencia|援助；帮助；出席|Ayuda o servicio que se presta a alguien; también, presencia.|Los mayores reciben asistencia médica y social.|community|sustantivo|asistencia social",
-"objeto|物品；对象；目的|Cosa material; también, finalidad o asunto de una acción.|El objeto de la campaña es apoyar a las familias.|community|sustantivo|objeto de una campaña",
-"ayuda|帮助；援助|Acción de ayudar o recurso que facilita una tarea.|Muchas familias reciben ayuda de los servicios sociales.|community|sustantivo|pedir / prestar ayuda",
-"centena|一百；百来个|Conjunto de cien unidades o cantidad aproximada de cien.|Una centena de voluntarios participó en la recogida.|community|sustantivo|una centena de personas",
-"contar|数；计算；讲述；依靠|Numerar elementos, narrar algo o disponer de alguien o algo.|La organización cuenta con más de cincuenta voluntarios.|community|verbo|contar con",
-"decena|十；十来个|Conjunto de diez unidades o cantidad aproximada de diez.|Una decena de familias vive en el edificio.|community|sustantivo|una decena de familias",
-"huérfano, na|孤儿；失去父母的|Persona menor de edad cuyo padre, madre o ambos han muerto.|La fundación ofrece apoyo a niños huérfanos.|community|adjetivo / sustantivo|niños huérfanos",
-"ocuparse|负责；照料；从事|Encargarse de una persona, una tarea o un asunto; se construye con de.|Mi vecina se ocupa de acompañar al anciano al médico.|care|verbo pronominal|ocuparse de alguien",
-"enterar(se)|告知；得知|Comunicar una información o llegar a conocerla; en uso pronominal lleva de.|Me enteré de la campaña por las redes sociales.|care|verbo|enterarse de",
-"regularmente|定期地；经常地；有规律地|De manera regular, con frecuencia o siguiendo un horario.|Los voluntarios visitan regularmente a las personas mayores.|care|adverbio|visitar regularmente",
-"librar|使免于；摆脱；交付钱款|Evitar que alguien sufra algo o quedar libre de una carga.|La ayuda puede librar a algunas familias de una deuda.|care|verbo|librar de",
-"a domicilio|送货上门；上门服务|En la vivienda o el lugar donde reside el destinatario.|El centro ofrece comidas a domicilio para mayores.|care|locución adverbial|entrega a domicilio",
-"primaria|小学教育；初级的|Etapa inicial de la educación obligatoria; femenino de primario.|Los niños reciben apoyo durante la educación primaria.|care|sustantivo / adjetivo|educación primaria",
-"cariñoso, sa|亲切的；充满关爱的|Que demuestra afecto, ternura o amabilidad.|La voluntaria es muy cariñosa con los niños.|care|adjetivo|un trato cariñoso",
-"regularidad|规律性；定期；稳定性|Cualidad de suceder o realizarse de forma constante y ordenada.|La regularidad de las visitas es importante.|care|sustantivo|con regularidad",
-"traslado|转移；搬迁；运送|Acción de llevar a una persona o cosa de un lugar a otro.|El traslado al hospital se realizó en ambulancia.|care|sustantivo|traslado al hospital",
-"rogar|恳求；请求|Pedir algo con insistencia, respeto o humildad.|La organización ruega a los vecinos que colaboren.|care|verbo|rogar que + subjuntivo",
-"frecuentar|经常去；常去；常与……交往|Ir con frecuencia a un lugar o tratar habitualmente con alguien.|Los estudiantes frecuentan la biblioteca del barrio.|care|verbo|frecuentar un lugar",
-"gastar|花费；消耗|Emplear dinero, tiempo o energía en algo.|Este mes hemos gastado menos electricidad.|daily|verbo|gastar dinero",
-"colgar(se)|挂；悬挂；电话/设备卡住|Poner algo suspendido; un dispositivo puede bloquearse.|No puedo terminar la llamada porque se ha colgado el teléfono.|daily|verbo|colgar el teléfono",
-"interminablemente|没完没了地；无休止地|De manera que parece no tener fin.|Los vecinos discutieron interminablemente sobre el ruido.|daily|adverbio|hablar interminablemente",
-"justo, ta|公平的；正好的；恰好|Que actúa con justicia; también, exacto o precisamente.|El precio es justo y todos pueden pagarlo.|daily|adjetivo / adverbio|un precio justo",
-"cortar|切；剪；中断|Separar algo en partes; interrumpir un suministro o comunicación.|Han cortado el gas por una avería en el edificio.|daily|verbo|cortar el suministro",
-"cuenta|账单；账户；计算；说明|Documento o cálculo de lo que se debe pagar; también cuenta bancaria.|¿Puedes traer la cuenta, por favor?|daily|sustantivo|pagar la cuenta",
-"factura|发票；账单|Documento que detalla una compra o un servicio y su importe.|La factura de la electricidad ha llegado esta mañana.|daily|sustantivo|factura de la luz",
-"gasto|开支；费用；花费|Cantidad de dinero que se emplea para pagar algo.|El gasto mensual de calefacción es elevado.|daily|sustantivo|gastos mensuales",
-"llamar la atención|引起注意；吸引注意；提醒|Atraer el interés de alguien o reprender a una persona.|El ruido de la televisión llamó la atención.|daily|locución verbal|llamar la atención",
-"por lo visto|看来；据说；显然|Expresión que introduce información que parece cierta según lo sabido.|Por lo visto, el calentador lleva días estropeado.|daily|locución adverbial|por lo visto",
-"telenovela|肥皂剧；电视连续剧|Serie dramática de televisión, normalmente con historia sentimental.|Mi abuela ve una telenovela después de cenar.|leisure|sustantivo|ver una telenovela",
-"pelear|打架；争吵；搏斗|Luchar físicamente o discutir con alguien.|Los hermanos suelen pelear por el mando de la televisión.|leisure|verbo|pelearse con",
-"rock|摇滚乐|Género musical caracterizado por guitarras, bajo y batería.|A mi compañero le encanta escuchar música rock.|leisure|sustantivo|música rock",
-"bastar|足够；够用|Ser suficiente; puede construirse con para o con.|Para reparar el grifo basta con cambiar una pieza.|daily|verbo|bastar para",
-"pelea|打架；争吵；争斗|Enfrentamiento físico o discusión fuerte entre personas.|La pelea entre los vecinos terminó pronto.|leisure|sustantivo|tener una pelea",
-"gas|燃气；气体|Sustancia sin forma ni volumen propios; combustible doméstico.|El edificio se ha quedado sin gas esta mañana.|home|sustantivo|cortar el gas",
-"deberse a|归因于；是由于|Tener algo como causa o motivo.|El retraso se debe a un problema de tráfico.|daily|locución verbal|deberse a una avería",
-"aparador|餐边柜；陈列柜|Mueble con cajones o puertas para guardar o exhibir objetos.|Guardamos los platos en el aparador del comedor.|home|sustantivo|un aparador de madera",
-"armario|衣柜；柜子|Mueble cerrado con puertas para guardar ropa u otros objetos.|Hay demasiada ropa en el armario.|home|sustantivo|armario empotrado",
-"calefacción|暖气；供暖系统|Sistema que sirve para calentar una vivienda o un edificio.|La calefacción del apartamento no funciona bien.|home|sustantivo|poner la calefacción",
-"calentador|热水器；加热器|Aparato que calienta agua o aire.|El calentador de agua está estropeado.|home|sustantivo|calentador de agua",
-"cobrar|收费；收取；领取工资|Recibir dinero por un trabajo, venta o servicio.|El técnico cobra cuarenta euros por la reparación.|daily|verbo|cobrar por un servicio",
-"cobrador|收款员；收费员|Persona que se encarga de cobrar pagos o tarifas.|El cobrador pasa por las viviendas para recoger el recibo.|daily|sustantivo|cobrador de recibos",
-"comunidad|社区；共同体；群体|Conjunto de personas que viven o comparten intereses.|La comunidad de vecinos organiza una reunión mensual.|community|sustantivo|comunidad de vecinos",
-"conserje|门卫；楼宇管理员|Persona encargada de vigilar, limpiar o atender un edificio.|El conserje avisó a los vecinos de la avería.|home|sustantivo|hablar con el conserje",
-"enchufar|插上电源；接通|Conectar un aparato a la corriente mediante un enchufe.|Antes de usar el aparato, hay que enchufarlo.|home|verbo|enchufar un aparato",
-"enchufe|插座；电源插头|Dispositivo que permite conectar un aparato a la red eléctrica.|El enchufe está detrás del armario.|home|sustantivo|enchufe de pared",
-"grifo|水龙头|Dispositivo que regula la salida de agua de una tubería.|Cierra el grifo para no desperdiciar agua.|home|sustantivo|abrir / cerrar el grifo",
-"inodoro|马桶；抽水马桶|Aparato sanitario destinado a recoger y evacuar los excrementos.|El inodoro pierde agua y hay que repararlo.|home|sustantivo|limpiar el inodoro",
-"lavabo|洗脸盆；盥洗池|Pila con grifo que se utiliza para lavarse las manos y la cara.|El lavabo del baño está atascado.|home|sustantivo|lavabo del baño",
-"noticiero|新闻节目；新闻报道（尤拉美常用）|Programa o espacio informativo que presenta noticias, especialmente en América Latina.|En el noticiero hablaron de las medidas sociales.|leisure|sustantivo|ver el noticiero",
-"telediario|电视新闻节目（西班牙常用）|Programa de televisión que informa sobre las noticias del día.|Mis padres ven el telediario de las nueve.|leisure|sustantivo|el telediario de la noche",
-"wáter|抽水马桶；厕所（口语）|Forma coloquial, usada en España, para referirse al inodoro o retrete.|El wáter pierde agua y han llamado a un fontanero.|home|sustantivo|tirar de la cadena del wáter"
-];
-const W=raw.map((s,i)=>{let a=s.split("|");return{id:i,w:a[0],zh:a[1],es:a[2],ex:a[3],g:a[4],pos:a[5],col:a[6]}});
-const C=[
-["La asociación ofrece ______ social a las personas mayores.","asistencia","ayuda|asistencia|factura|calefacción"],
-["Cada ______ dedica dos tardes a la semana a ayudar a los vecinos.","voluntario","voluntario|cobrador|habitante|conserje"],
-["La ______ de esta provincia ha aumentado en los últimos años.","población","población|factura|pelea|calefacción"],
-["El programa apoya a las familias ______.","desfavorecidas","desfavorecidas|cariñosas|económicas|primarias"],
-["Los voluntarios visitan ______ a las personas mayores.","regularmente","regularmente|interminablemente|justo|a domicilio"],
-["El centro ofrece comidas ______ para personas dependientes.","a domicilio","a domicilio|por lo visto|con cercanía|decentena"],
-["Mi vecina va a ______ de acompañar al anciano al médico.","ocuparse","ocuparse|frecuentar|gastar|pelear"],
-["La ______ de la luz ha llegado esta mañana.","factura","factura|cuenta|centena|asistencia"],
-["Intentamos no ______ demasiado dinero en electricidad.","gastar","gastar|cobrar|determinar|rogar"],
-["El retraso se ______ a un problema de tráfico.","debe","debe|cuenta|libra|concentra"],
-["Cierra el ______ para ahorrar agua.","grifo","grifo|enchufe|aparador|inodoro"],
-["El ______ de agua está estropeado.","calentador","calentador|calefacción|armario|lavabo"],
-["Antes de usar el aparato, hay que ______.","enchufarlo","enchufarlo|cortarlo|frecuentarlo|librarlo"],
-["Mis padres ven el ______ después de cenar.","telediario","telediario|rock|noticiero|telenovela"],
-["Los hermanos suelen ______ por el mando de la televisión.","pelear","pelear|cobrar|hallarse|determinar"]
-];
-const ORD=[["志愿者定期探望社区里的老人。","Los voluntarios visitan regularmente a las personas mayores."],["我昨天才得知这个消息。","Ayer me enteré de la noticia."],["热水器故障是由于插座的问题。","La avería del calentador se debe a un problema con el enchufe."],["为了修好水龙头，更换一个零件就够了。","Para reparar el grifo basta con cambiar una pieza."],["请您不要在这里停车。","Le rogamos que no aparque aquí."]];
-const KEY="misionVocabSpanishV1";let S;try{S=JSON.parse(localStorage.getItem(KEY))||{xp:0,known:[],wrong:[],rounds:[],seen:[]}}catch(e){S={xp:0,known:[],wrong:[],rounds:[],seen:[]}}
-let game=null,idx=0,score=0,items=[],first=null,matched=[],bad=[];
-const $=id=>document.getElementById(id),esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-function save(){localStorage.setItem(KEY,JSON.stringify(S));stats()}
-function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
-function group(id){return G.find(g=>g[0]===id)}
-function stats(){$("xp").textContent=S.xp;$("total").textContent=W.length;$("known").textContent=S.known.length;$("rounds").textContent=S.rounds.length}
-function view(id){document.querySelectorAll(".view").forEach(x=>x.classList.toggle("active",x.id===id));document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x.dataset.view===id));if(id==="words")renderWords();if(id==="progress")renderProgress();window.scrollTo(0,0)}
-document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>view(b.dataset.view));
-function modules(){$("modules").innerHTML=G.map(g=>'<button class="module" data-g="'+g[0]+'"><div class="emoji">'+g[3]+'</div><h3>'+g[1]+'</h3><p>'+g[2]+' · '+g[4]+'</p><small>'+W.filter(w=>w.g===g[0]).length+' 个词汇 → 开始探索</small></button>').join("");document.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>{view("words");$("filter").value=b.dataset.g;renderWords()})}
-function renderWords(){let q=$("search").value.toLowerCase().trim(),g=$("filter").value;let list=W.filter(w=>(g==="all"||w.g===g)&&(!q||(w.w+" "+w.zh+" "+w.es+" "+w.col).toLowerCase().includes(q)));$("count").textContent=list.length+" / "+W.length;$("wordlist").innerHTML=list.map(w=>'<button class="word" data-w="'+w.id+'"><b>'+esc(w.w)+'</b><small>'+esc(w.pos)+' · '+group(w.g)[2]+'</small><span>'+esc(w.zh)+'</span></button>').join("")||'<div class="note">没有找到匹配词汇。</div>';document.querySelectorAll("[data-w]").forEach(b=>b.onclick=()=>detail(+b.dataset.w))}
-function detail(id){let w=W[id];$("detail").innerHTML='<div class="detail"><span class="pill">'+group(w.g)[1]+'</span><h3>'+esc(w.w)+'</h3><p style="color:var(--mint)">'+esc(w.pos)+'</p><div class="label">中文释义</div><p>'+esc(w.zh)+'</p><div class="label">DEFINICIÓN EN ESPAÑOL</div><p>'+esc(w.es)+'</p><div class="label">EJEMPLO</div><div class="example"><p>'+esc(w.ex)+'</p></div><div class="label">COMBINACIÓN FRECUENTE</div><p style="color:var(--mint)">'+esc(w.col)+'</p><button class="primary" id="known">'+(S.known.includes(id)?"✓ 已标记掌握":"标记为已掌握 +5 XP")+'</button></div>';$("known").onclick=()=>{if(!S.known.includes(id)){S.known.push(id);S.xp+=5;save()}detail(id)}}
-$("search").oninput=renderWords;$("filter").onchange=renderWords;G.forEach(g=>{let o=document.createElement("option");o.value=g[0];o.textContent=g[2];$("filter").appendChild(o)});
-function open(type){game=type;idx=0;score=0;bad=[];if(type==="cloze"){items=shuffle(C).map(data=>({kind:"cloze",data}));}else if(type==="mixed"){items=shuffle([...shuffle(W).slice(0,5).map(data=>({kind:"quiz",data})),...shuffle(C).slice(0,5).map(data=>({kind:"cloze",data}))]);}else{items=type==="review"?shuffle(W.filter(w=>S.wrong.includes(w.id)||!S.known.includes(w.id))).slice(0,10).map(data=>({kind:"quiz",data})):shuffle(W).slice(0,10).map(data=>({kind:"quiz",data}));}if(!items.length)items=shuffle(W).slice(0,10).map(data=>({kind:"quiz",data}));$("modal").style.display="block";if(type==="match")matchGame();else question()}function frame(title,total){$("gamebox").innerHTML='<div class="meta"><span>'+title+'</span><span id="counter">'+Math.min(idx+1,total)+' / '+total+'</span><button class="secondary" id="quit">退出 ✕</button></div><div class="bar"><i id="bar" style="width:'+(idx/total*100)+'%"></i></div><div id="q"></div>';$("quit").onclick=()=>{if(confirm("退出本轮挑战？本轮不计入成绩。"))close()}}
-function question(){
- if(idx>=items.length){finish();return}
- const entry=items[idx],cloze=entry&&entry.kind==="cloze",c=cloze?entry.data:null;
- const w=cloze?W.find(x=>x.w===c[1]||(c[1]==="debe"&&x.w==="deberse a")||(c[1]==="desfavorecidas"&&x.w==="desfavorecido, da")):entry.data;
- frame(cloze?"✍️ COMPLETA LA FRASE":"🧠 SIGNIFICADO CORRECTO",items.length);
- let q="",correct="",explain="";
- if(cloze){
-  if(!Array.isArray(c)||!c[0]||!c[1]||!c[2]){$("q").innerHTML='<div class="prompt"><h2>题目数据暂不可用</h2><p>请退出后重新进入挑战。</p></div>';return}
-  const opts=shuffle(c[2].split("|")),parts=c[0].split("______");
-  q='<div class="prompt"><small>CONTEXT CHALLENGE</small><h2>Completa la frase</h2><p>'+esc(parts[0])+'<span class="blank">______</span>'+esc(parts[1]||"")+'</p></div><div class="options">'+opts.map(o=>'<button class="option" data-a="'+esc(o)+'">'+esc(o)+'</button>').join("")+'</div>';
-  correct=c[1];explain="Respuesta: "+c[1]+(w?" · "+w.es+" · "+w.zh:"");
- }else{
-  if(!w){$("q").innerHTML='<div class="prompt"><h2>词汇数据暂不可用</h2><p>请退出后重新进入挑战。</p></div>';return}
-  const opts=shuffle([w].concat(shuffle(W.filter(x=>x.id!==w.id)).slice(0,3)));
-  q='<div class="prompt"><small>VOCABULARY CHALLENGE</small><h2>'+esc(w.w)+'</h2><p>'+esc(w.pos)+' · 请选择正确的中文释义。</p></div><div class="options">'+opts.map(o=>'<button class="option" data-a="'+o.id+'">'+esc(o.zh)+'</button>').join("")+'</div>';
-  correct=String(w.id);explain=w.es+" · "+w.ex;
- }
- $("q").innerHTML=q+'<div class="feedback" id="fb"></div><div class="actions"><span class="pill">答对 +10 XP</span><button class="primary" id="next" style="display:none">下一题 →</button></div>';
- document.querySelectorAll("#q [data-a]").forEach(b=>b.onclick=()=>{
-  if($("fb").classList.contains("show"))return;
-  const ok=b.dataset.a===correct;
-  document.querySelectorAll("#q [data-a]").forEach(x=>{x.disabled=true;if(x.dataset.a===correct)x.classList.add("correct")});
-  if(!ok){b.classList.add("wrong");if(w){bad.push(w.id);if(!S.wrong.includes(w.id))S.wrong.push(w.id)}}else{score++;S.xp+=10;if(w)S.seen.push(w.id)}
-  $("fb").className="feedback show";$("fb").innerHTML=(ok?"✓ ¡Muy bien! ":"✗ ¡Inténtalo otra vez! ")+esc(explain);
-  $("next").style.display="inline-block";$("next").onclick=()=>{idx++;question()};save();
- });
-}function matchGame(){frame("🧩 UNE LAS PAREJAS",6);let chosen=shuffle(W).slice(0,6),left=shuffle(chosen.map(w=>({id:w.id,t:w.w,k:"w"}))),right=shuffle(chosen.map(w=>({id:w.id,t:w.zh,k:"m"}))),done=[];let all=left.concat(right);$("q").innerHTML='<div class="prompt"><small>MATCH THE PAIRS</small><h2>Une las parejas</h2><p>依次点击一个西语词汇和对应的中文释义。</p></div><div class="match">'+all.map((x,i)=>'<button data-m="'+i+'">'+esc(x.t)+'</button>').join("")+'</div><div class="feedback" id="fb"></div><div class="actions"><span class="pill" id="mc">已完成 0/6 组</span><button class="primary" id="finish" style="display:none">查看结果 →</button></div>';let selected=null;document.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{let x=all[+b.dataset.m];if(done.includes(x.id))return;if(!selected){selected=x;b.classList.add("sel");return}if(selected.k!==x.k&&selected.id===x.id){done.push(x.id);S.xp+=10;document.querySelectorAll("[data-m]").forEach(z=>{if(all[+z.dataset.m].id===x.id)z.classList.add("done")});$("mc").textContent="已完成 "+done.length+"/6 组";selected=null;save();if(done.length===6){score=6;$("fb").className="feedback show";$("fb").innerHTML="<b style='color:var(--mint)'>¡Perfecto!</b> 全部配对成功！";$("finish").style.display="inline-block";$("finish").onclick=finish}}else{selected=null;document.querySelectorAll("[data-m]").forEach(z=>z.classList.remove("sel"))}})}
-function finish(){let total=game==="match"?6:items.length;S.rounds.push({score:score,total:total,type:game});save();$("gamebox").innerHTML='<div class="result"><div class="emoji">'+(score===total?"🏆":"🌟")+'</div><h2>'+(score===total?"¡Excelente! 完美通关！":"¡Buen trabajo! 挑战完成！")+'</h2><div class="score">'+score+' / '+total+'</div><p>本轮正确 '+score+' 题 · 继续积累 XP，解锁更高掌握度。</p><p style="color:var(--muted);font-size:12px">'+(bad.length?"建议复习："+bad.map(id=>W[id].w).join("、"):"本轮没有记录错题，继续保持！")+'</p><button class="primary" id="back">返回冒险大厅</button> <button class="secondary" id="again">再来一轮</button></div>';$("back").onclick=close;$("again").onclick=()=>open(game)}
-function renderProgress(){let total=S.rounds.reduce((a,r)=>a+r.total,0),correct=S.rounds.reduce((a,r)=>a+r.score,0);$("pxp").textContent=S.xp;$("prounds").textContent=S.rounds.length;$("accuracy").textContent=total?Math.round(correct/total*100)+"%":"—";$("groupProgress").innerHTML=G.map(g=>{let a=W.filter(w=>w.g===g[0]),n=a.filter(w=>S.known.includes(w.id)).length;return '<div class="prow"><span>'+g[3]+' '+g[2]+'</span><div class="track"><i style="width:'+(n/a.length*100)+'%"></i></div><b>'+n+'/'+a.length+'</b></div>'}).join("");let due=W.filter(w=>S.wrong.includes(w.id));$("reviewWords").innerHTML=due.length?due.map(w=>'<span class="pill" style="display:inline-block;margin:3px">'+esc(w.w)+'</span>').join(""):"暂时没有错题记录。完成挑战后，这里会显示需要复习的词汇。"}
-document.querySelectorAll("[data-game]").forEach(b=>b.onclick=()=>open(b.dataset.game));$("reset").onclick=()=>{if(confirm("确定清除当前浏览器中的全部学习记录吗？")){S={xp:0,known:[],wrong:[],rounds:[],seen:[]};save();renderProgress()}}
-modules();renderWords();stats();
-})();
-</script></body></html>
+:root{--ink:#26344b;--muted:#65748a;--line:#dce5f0}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:radial-gradient(ellipse at 8% 0%,#fff0df,transparent 35%),radial-gradient(ellipse at 95% 15%,#e7efff,transparent 38%),#f5f7fb}
+.wrap{width:min(1080px,100%);margin:auto;padding:30px 20px 50px}
+header{display:flex;align-items:center;gap:13px;margin:4px 0 28px}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,#ffc58b,#a8bfff);display:grid;place-items:center;font-size:25px}
+.brand strong{font-size:20px;letter-spacing:.2px}.brand small{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+.hero{padding:clamp(26px,5vw,48px);border:1px solid var(--line);border-radius:28px;background:linear-gradient(120deg,#fffaf3,#f0f5ff);box-shadow:0 14px 38px #3148650c}
+.eyebrow{font-size:11px;font-weight:850;letter-spacing:2px;color:#5678aa}
+h1{font-size:clamp(34px,6vw,54px);line-height:1.12;margin:13px 0}
+h1 span{color:#527cc2}
+.hero p{max-width:650px;color:var(--muted);font-size:15px;line-height:1.8;margin:0}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:34px 2px 15px}
+.section-head h2{font-size:21px;margin:0}.section-head p{font-size:12px;color:var(--muted);margin:5px 0 0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.card{display:flex;align-items:flex-start;gap:16px;min-height:148px;padding:21px;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:21px;background:#fff;box-shadow:0 7px 22px #31486508;transition:transform .16s,border-color .16s}
+.card:hover{transform:translateY(-3px);border-color:#aebfe0}
+.icon{flex:0 0 50px;height:50px;border-radius:16px;display:grid;place-items:center;font-size:25px;background:#eef3ff}
+.card:nth-child(2) .icon{background:#fff3e8}.card:nth-child(3) .icon{background:#eaf7f1}.card:nth-child(4) .icon{background:#f2edff}.card:nth-child(5) .icon{background:#fff0f2}
+.card h3{font-size:18px;margin:2px 0 7px}.card p{font-size:13px;line-height:1.65;color:var(--muted);margin:0}
+.enter{display:inline-block;margin-top:12px;font-size:12px;font-weight:750;color:#5277b5}
+footer{text-align:center;color:#8a96a8;font-size:11px;margin-top:30px}
+@media(max-width:620px){.wrap{padding:20px 14px 35px}.grid{grid-template-columns:1fr}.card{min-height:125px;padding:17px}.hero{border-radius:22px}}
+</style>
+</head>
+<body><main class="wrap">
+<header><div class="logo">✦</div><div class="brand"><strong>Wonderland</strong><small>综合学习平台 · Explore, practise and grow</small></div></header>
+<section class="hero"><div class="eyebrow">A LEARNING WORLD FOR EVERY SUBJECT</div><h1>在 Wonderland，<br><span>开启每一门学科的探索。</span></h1><p>把语文、数学、英语和历史放进一个学习空间。每门学科拥有独立的内容、练习与学习路径，逐步积累，持续进步。</p></section>
+<div class="section-head"><div><h2>选择学习学科</h2><p>Choose a subject to get started</p></div></div>
+<section class="grid">
+<a class="card" href="./chinese-2026/"><div class="icon">📖</div><div><h3>语文 · Chinese</h3><p>字词积累、古诗文、文言文、现代文阅读与写作训练。</p><span class="enter">进入语文学习 →</span></div></a>
+<a class="card" href="./math-2026/"><div class="icon">📐</div><div><h3>数学 · Mathematics</h3><p>知识梳理、例题讲解、分层练习与错题复习。</p><span class="enter">进入数学学习 →</span></div></a>
+<a class="card" href="./english-2026/"><div class="icon">🌍</div><div><h3>英语 · English</h3><p>沿用现有 U1—U8 学习系统，包含词汇、语法、阅读和单元检测。</p><span class="enter">进入英语学习 →</span></div></a>
+<a class="card" href="./history-2026/"><div class="icon">🏛️</div><div><h3>历史 · History</h3><p>历史时间轴、人物事件、材料研读与单元检测。</p><span class="enter">进入历史学习 →</span></div></a>
+<a class="card" href="./spanish-2026/"><div class="icon">🗺️</div><div><h3>西班牙语 · Spanish</h3><p>保留原有西班牙语词汇冒险学习网页，独立访问与使用。</p><span class="enter">进入西语学习 →</span></div></a>
+</section>
+<footer>Wonderland · 一个持续建设中的综合学习空间</footer>
+</main></body></html>
