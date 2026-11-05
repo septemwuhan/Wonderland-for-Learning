@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" role="img" aria-labelledby="t d">
+<title id="t">远古人类生活场景</title><desc id="d">远古人类在河流、山地和聚落环境中制作石器、采集与耕作的历史插画</desc>
+<defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#b9d9e8"/><stop offset="1" stop-color="#f5e4c4"/></linearGradient><linearGradient id="river" x2="0" y2="1"><stop stop-color="#78b8c5"/><stop offset="1" stop-color="#d4e8d9"/></linearGradient><linearGradient id="hill" x2="0" y2="1"><stop stop-color="#8ba77b"/><stop offset="1" stop-color="#536f54"/></linearGradient></defs>
+<rect width="1200" height="440" fill="url(#sky)"/><circle cx="1000" cy="82" r="42" fill="#f6d58d"/>
+<path d="M0 235 140 90 255 210 385 72 550 235 710 100 870 230 1030 85 1200 220V440H0Z" fill="#9bb4a0"/>
+<path d="M0 265 180 155 310 255 500 140 680 270 860 155 1040 260 1200 170V440H0Z" fill="#738f70"/>
+<path d="M0 300 Q170 260 330 300 T650 285 T980 300 T1200 270V440H0Z" fill="url(#hill)"/>
+<path d="M0 340 Q220 290 420 340 T820 330 T1200 325V440H0Z" fill="url(#river)"/>
+<path d="M0 375 Q220 330 430 375 T850 365 T1200 360" fill="none" stroke="#f4f0d8" stroke-width="7" opacity=".8"/>
+<g fill="#526f4c"><circle cx="110" cy="250" r="40"/><circle cx="165" cy="245" r="30"/><circle cx="1070" cy="255" r="42"/><circle cx="1125" cy="245" r="32"/></g>
+<g fill="#8a6042" stroke="#65452f" stroke-width="5"><path d="M730 250 800 190 875 250V310H730Z"/><path d="M710 250 800 170 895 250Z" fill="#b47b4b"/><path d="M755 260H790V310H755Z" fill="#473b31"/><path d="M815 260H855V285H815Z" fill="#d9bd8d"/></g>
+<g stroke="#3d332a" stroke-width="8" stroke-linecap="round" fill="none"><circle cx="460" cy="220" r="24" fill="#9a6749" stroke="none"/><path d="M455 248 430 305 470 332M440 278 400 300M445 270 485 290M470 332 430 370M470 332 510 365"/><path d="M570 260 550 305 580 330M557 280 525 300M558 280 590 295M580 330 560 365M580 330 615 355"/></g>
+<g fill="#d5b27b" stroke="#806443" stroke-width="3"><path d="M375 330 410 300 430 335Z"/><path d="M515 340 545 315 565 345Z"/></g>
+<g stroke="#e6d39c" stroke-width="4" fill="none"><path d="M80 355q50-35 95 0M100 375q45-28 90 0M920 350q55-40 105 0"/></g>
+<g fill="#fff8e8" opacity=".9"><rect x="34" y="28" width="340" height="62" rx="18"/><text x="58" y="68" fill="#70432e" font-family="sans-serif" font-size="27" font-weight="700">从远古走来 · 探索文明起源</text></g>
+</svg>
