@@ -122,7 +122,7 @@ index++;render();
 $('modes').addEventListener('click',e=>{const btn=e.target.closest('[data-mode]');if(!btn)return;mode=btn.dataset.mode;document.querySelectorAll('.mode').forEach(x=>x.classList.toggle('active',x===btn));});
 $('start').addEventListener('click',()=>{questions=Array.from({length:15},makeQuestion);index=0;score=0;$('game').classList.add('show');$('answer').style.display='block';$('next').textContent='下一题 →';render();$('game').scrollIntoView({behavior:'smooth',block:'start'});});
 $('check').addEventListener('click',check);
-$('next').addEventListener('click',()=>{if(index>=14){$('game').classList.remove('show');$('start').textContent='再来 15 题挑战';return;}next();});
+$('next').addEventListener('click',()=>{if(index>=14){if($('next').textContent==='再来一轮 ↻'){$('game').classList.remove('show');$('start').textContent='再来 15 题挑战';}else{finish();$('next').textContent='再来一轮 ↻';}return;}next();});
 $('answer').addEventListener('keydown',e=>{if(e.key==='Enter'){if(!$('check').disabled)check();else if(!$('next').disabled)$('next').click();}});
 $('clearWrong').addEventListener('click',()=>{if(confirm('确定清空所有错题记录吗？')){saved.wrong=[];persist();}});
 updateStats();
