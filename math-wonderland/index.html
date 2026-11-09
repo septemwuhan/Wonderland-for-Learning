@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fff8ec">
+<title>Math Wonderland · 数字运算乐园</title>
+<style>
+:root{--ink:#26344b;--muted:#718096;--line:#e6eaf1;--blue:#547fce;--blue2:#eaf1ff;--orange:#f2a34a;--green:#218b69;--red:#c65d61;--paper:#fff;--bg:#fff9ef}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 5% 0%,#ffe8c9 0,transparent 34%),radial-gradient(ellipse at 95% 12%,#e4edff 0,transparent 34%),var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+.wrap{width:min(1050px,100%);margin:auto;padding:22px 18px 55px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px}.back{color:#61799f;text-decoration:none;font-size:13px}.brand{font-weight:850;color:#486eae}.brand span{font-size:22px;margin-right:7px}
+.hero{text-align:center;padding:30px 0 20px}.eyebrow{font-size:11px;letter-spacing:2px;font-weight:850;color:#8b7b64}.hero h1{font-size:clamp(34px,6vw,52px);margin:10px 0 7px;letter-spacing:-1px}.hero p{margin:0;color:var(--muted);font-size:14px;line-height:1.7}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}.stat{background:#ffffffd9;border:1px solid var(--line);border-radius:17px;padding:13px;text-align:center}.stat strong{display:block;font-size:25px;color:#5279be}.stat span{font-size:11px;color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(230px,.8fr);gap:15px;align-items:start}.panel{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:21px;box-shadow:0 9px 28px #35465b0a}.panel h2{font-size:18px;margin:0 0 14px}.modes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.mode{border:1px solid var(--line);border-radius:14px;padding:12px;background:#fff;text-align:left;cursor:pointer;color:var(--ink);font:inherit}.mode.active{border:2px solid #83a4e4;background:#f3f7ff;padding:11px}.mode b{display:block;font-size:14px}.mode small{display:block;color:var(--muted);font-size:11px;margin-top:4px}.settings{margin:15px 0 0}.settings label{font-size:12px;color:var(--muted);display:block;margin-bottom:6px}.settings select,.answer{width:100%;border:1px solid var(--line);border-radius:12px;padding:11px 12px;background:white;color:var(--ink);font:inherit}.primary,.secondary{border:0;border-radius:13px;padding:12px 17px;font:inherit;font-weight:750;cursor:pointer}.primary{background:#587fc7;color:white}.primary:disabled{opacity:.4;cursor:not-allowed}.secondary{background:#f0f3f8;color:#53657b}.start{width:100%;margin-top:17px}
+.game{margin-top:15px;display:none}.game.show{display:block}.gamehead{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}.track{height:8px;background:#edf0f5;border-radius:20px;margin:10px 0 24px;overflow:hidden}.track div{height:100%;width:0;background:linear-gradient(90deg,#83a7e7,#f5bb70);transition:width .2s}.question{text-align:center;padding:10px 0 18px}.question .tag{font-size:11px;color:#8a99ae}.equation{font-size:clamp(42px,9vw,64px);font-weight:850;letter-spacing:2px;margin:8px 0 18px}.answer{max-width:220px;text-align:center;font-size:25px;font-weight:750}.answer:focus{outline:3px solid #dce8ff;border-color:#8aa9e4}.feedback{min-height:28px;margin:12px 0 4px;text-align:center;font-size:13px;font-weight:700}.feedback.good{color:var(--green)}.feedback.bad{color:var(--red)}.gameactions{display:flex;justify-content:center;gap:9px;flex-wrap:wrap}.side .panel+ .panel{margin-top:15px}.side p{font-size:12px;color:var(--muted);line-height:1.7}.wrong-list{padding-left:18px;margin:0;color:#65748a;font-size:12px;line-height:1.8;max-height:180px;overflow:auto}.empty{color:#9aa5b5;font-size:12px}.notice{font-size:11px;color:#8a96a8;text-align:center;margin-top:20px}
+@media(max-width:720px){.layout{grid-template-columns:1fr}.stats{gap:7px}.stat{padding:10px 5px}.panel{padding:17px}.wrap{padding:17px 13px 40px}}
+</style>
+</head>
+<body><main class="wrap">
+<div class="top"><a class="back" href="../">← 返回 Wonderland</a><div class="brand"><span>✦</span>Math Wonderland</div></div>
+<header class="hero"><div class="eyebrow">NUMBER ADVENTURE · LEVEL UP YOUR MATH</div><h1>数字运算乐园</h1><p>每天练一练，让计算越来越准确、越来越快。完成挑战，收集你的星星！</p></header>
+<section class="stats">
+<div class="stat"><strong id="totalCount">0</strong><span>累计答题</span></div>
+<div class="stat"><strong id="accuracy">—</strong><span>累计正确率</span></div>
+<div class="stat"><strong id="stars">0 ★</strong><span>收集星星</span></div>
+</section>
+<div class="layout"><section>
+<div class="panel"><h2>选择练习内容</h2>
+<div class="modes" id="modes">
+<button class="mode active" data-mode="mixed"><b>🎯 综合挑战</b><small>加法与减法混合练习</small></button>
+<button class="mode" data-mode="add"><b>➕ 加法练习</b><small>专注加法计算</small></button>
+<button class="mode" data-mode="sub"><b>➖ 减法练习</b><small>专注减法计算</small></button>
+<button class="mode" data-mode="carry"><b>🌟 进位加法</b><small>练习个位满十进一</small></button>
+<button class="mode" data-mode="borrow"><b>🧩 退位减法</b><small>练习个位不够减</small></button>
+</div>
+<div class="settings"><label for="level">选择难度</label><select id="level"><option value="easy">启蒙：20 以内</option><option value="normal" selected>进阶：100 以内</option><option value="hard">挑战：两位数综合</option></select></div>
+<button class="primary start" id="start">开始 15 题挑战</button></div>
+<div class="panel game" id="game">
+<div class="gamehead"><span id="roundLabel">第 1 / 15 题</span><span id="scoreLabel">本轮正确：0</span></div><div class="track"><div id="progress"></div></div>
+<div class="question"><div class="tag" id="questionTag">准备好了吗？</div><div class="equation" id="equation">—</div><input class="answer" id="answer" type="number" inputmode="numeric" placeholder="输入答案" aria-label="输入答案"></div>
+<div class="feedback" id="feedback" aria-live="polite"></div><div class="gameactions"><button class="primary" id="check">确认答案</button><button class="secondary" id="next" disabled>下一题 →</button></div>
+</div>
+</section>
+<aside class="side">
+<div class="panel"><h2>🏆 本轮奖励</h2><p>完成一轮 15 题挑战，根据正确率获得星星：</p><p><b>15 题全对：</b> ⭐⭐⭐<br><b>正确率达到 80%：</b> ⭐⭐<br><b>正确率达到 60%：</b> ⭐</p><p>星星和学习记录保存在当前设备的浏览器中。</p></div>
+<div class="panel"><h2>📝 错题回顾 <span id="wrongCount"></span></h2><div id="wrongArea" class="empty">暂时没有错题，继续保持！</div><button class="secondary" id="clearWrong" style="margin-top:12px;display:none">清空错题记录</button></div>
+</aside></div>
+<div class="notice">Math Wonderland · 练习进度仅保存在本设备，不会上传个人信息。</div>
+</main>
+<script>
+(function(){
+const $=id=>document.getElementById(id);
+const KEY='wonderlandMathPracticeV1';
+let saved={total:0,correct:0,stars:0,wrong:[]};
+try{saved=Object.assign(saved,JSON.parse(localStorage.getItem(KEY)||'{}'));}catch(e){}
+let mode='mixed',questions=[],index=0,score=0,locked=false;
+function persist(){try{localStorage.setItem(KEY,JSON.stringify(saved));}catch(e){} updateStats();}
+function updateStats(){
+$('totalCount').textContent=saved.total||0;
+$('accuracy').textContent=saved.total?Math.round(saved.correct/saved.total*100)+'%':'—';
+$('stars').textContent=(saved.stars||0)+' ★';
+$('wrongCount').textContent='('+(saved.wrong||[]).length+')';
+const area=$('wrongArea'),list=saved.wrong||[];
+if(!list.length){area.className='empty';area.textContent='暂时没有错题，继续保持！';$('clearWrong').style.display='none';}
+else{area.className='';area.innerHTML='<ol class="wrong-list">'+list.slice(-12).reverse().map(q=>'<li>'+q.a+' '+q.op+' '+q.b+' = <b>'+q.correct+'</b></li>').join('')+'</ol>';$('clearWrong').style.display='inline-block';}
+}
+function rand(n){return Math.floor(Math.random()*n);}
+function makeQuestion(){
+const level=$('level').value,limit=level==='easy'?20:100;
+let op=mode==='add'||mode==='carry'?'+':mode==='sub'||mode==='borrow'?'−':(rand(2)?'+':'−');
+let a,b;
+for(let tries=0;tries<100;tries++){
+a=rand(limit+1);b=rand(limit+1);
+if(level==='hard'){a=10+rand(90);b=10+rand(90);}
+if(op==='−'&&b>a)[a,b]=[b,a];
+const carry=(a%10+b%10)>=10,borrow=(a%10)<(b%10);
+if(mode==='carry'&&!carry)continue;
+if(mode==='borrow'&&(op!=='−'||!borrow))continue;
+if(mode==='carry'&&op!=='+' )continue;
+if(mode==='borrow'&&op!=='−')continue;
+return {a,b,op,correct:op==='+'?a+b:a-b};
+}
+if(mode==='carry')return {a:8,b:7,op:'+',correct:15};
+if(mode==='borrow')return {a:32,b:17,op:'−',correct:15};
+return {a:7,b:5,op,correct:op==='+'?12:2};
+}
+function render(){
+const q=questions[index];locked=false;
+$('roundLabel').textContent='第 '+(index+1)+' / 15 题';
+$('scoreLabel').textContent='本轮正确：'+score;
+$('progress').style.width=(index/15*100)+'%';
+$('questionTag').textContent=({mixed:'综合计算',add:'加法练习',sub:'减法练习',carry:'进位加法',borrow:'退位减法'})[mode];
+$('equation').textContent=q.a+' '+q.op+' '+q.b+' = ?';
+$('answer').value='';$('answer').disabled=false;$('answer').focus();
+$('feedback').textContent='';$('feedback').className='feedback';
+$('check').disabled=false;$('check').style.display='inline-block';$('next').disabled=true;
+}
+function finish(){
+$('progress').style.width='100%';
+const pct=Math.round(score/15*100),earned=score===15?3:pct>=80?2:pct>=60?1:0;
+saved.stars=(saved.stars||0)+earned;persist();
+$('roundLabel').textContent='挑战完成！';
+$('scoreLabel').textContent='本轮正确：'+score+' / 15';
+$('equation').textContent=score+' / 15';
+$('questionTag').textContent='本轮正确率 '+pct+'%';
+$('answer').style.display='none';$('feedback').className='feedback '+(earned?'good':'');$('feedback').textContent=earned?'获得 '+earned+' 颗星星！继续挑战吧。':'本轮未获得星星，再练一次会更好。';
+$('check').style.display='none';$('next').disabled=false;$('next').textContent='再来一轮 ↻';$('progress').style.width='100%';
+}
+function check(){
+if(locked)return;
+const raw=$('answer').value;if(raw.trim()===''){$('feedback').textContent='先输入一个答案。';return;}
+const q=questions[index],value=Number(raw),ok=value===q.correct;
+locked=true;saved.total=(saved.total||0)+1;
+if(ok){score++;saved.correct=(saved.correct||0)+1;$('feedback').textContent='回答正确！做得好。';$('feedback').className='feedback good';}
+else{saved.wrong=saved.wrong||[];saved.wrong.push({a:q.a,b:q.b,op:q.op,correct:q.correct});if(saved.wrong.length>100)saved.wrong.shift();$('feedback').textContent='再记住这道题：正确答案是 '+q.correct+'。';$('feedback').className='feedback bad';}
+persist();$('scoreLabel').textContent='本轮正确：'+score;
+$('answer').disabled=true;$('check').disabled=true;$('next').disabled=false;
+}
+function next(){
+if(index>=14){$('answer').style.display='block';$('next').textContent='下一题 →';finish();return;}
+index++;render();
+}
+$('modes').addEventListener('click',e=>{const btn=e.target.closest('[data-mode]');if(!btn)return;mode=btn.dataset.mode;document.querySelectorAll('.mode').forEach(x=>x.classList.toggle('active',x===btn));});
+$('start').addEventListener('click',()=>{questions=Array.from({length:15},makeQuestion);index=0;score=0;$('game').classList.add('show');$('answer').style.display='block';$('next').textContent='下一题 →';render();$('game').scrollIntoView({behavior:'smooth',block:'start'});});
+$('check').addEventListener('click',check);
+$('next').addEventListener('click',()=>{if(index>=14){$('game').classList.remove('show');$('start').textContent='再来 15 题挑战';return;}next();});
+$('answer').addEventListener('keydown',e=>{if(e.key==='Enter'){if(!$('check').disabled)check();else if(!$('next').disabled)$('next').click();}});
+$('clearWrong').addEventListener('click',()=>{if(confirm('确定清空所有错题记录吗？')){saved.wrong=[];persist();}});
+updateStats();
+})();
+</script></body></html>
